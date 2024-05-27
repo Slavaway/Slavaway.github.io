@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пожертвование для {{ recipient }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+    <!-- Подключаем Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Подключаем шрифт Montserrat для улучшения восприятия текста -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Подключаем стили для страницы Donate -->
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #444; /* Цвет текста */
+            background-color: #f8f9fa; /* Светло-серый цвет фона */
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 15px;
+            background-color: #fff; /* Белый цвет фона */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень */
+            margin-top: 50px;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #6a11cb; /* Фиолетовый цвет для заголовка */
+            font-size: 28px; /* Увеличим размер заголовка */
+            font-weight: bold; /* Увеличим жирность заголовка */
+        }
+        p {
+            margin-bottom: 10px;
+            font-size: 16px; /* Увеличим размер текста */
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 10px; /* Закруглим углы изображения */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Добавим тень изображению */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Пожертвование для {{ recipient }}</h1>
+        <p>Сумма в долларах: ${{ amount_in_usd }}</p>
+        <p>Сумма в Ethereum: {{ amount_in_eth }} ETH</p>
+        <p>Адрес Ethereum для перевода средств: {{ ethereum_address }}</p>
+        <img src="{{ qr_code_url }}" alt="QR Code для оплаты">
+        <p>Отсканируйте этот QR-код с помощью вашего криптокошелька для совершения пожертвования.</p>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

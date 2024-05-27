@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background-color: #ffffff !important; /* Белый цвет фона */
+    color: #228B22 !important; /* Зеленый цвет текста */
+    padding: 10px;
+}
+
+
+nav ul li a {
+    color: #228B22 !important; /* Зеленый цвет текста */
+    text-decoration: none !important;
+}
+
+nav ul li a:hover {
+    color: #006400 !important; /* Темно-зеленый цвет текста при наведении */
+}
+
+h1 {
+    color: #333;
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.donate-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.donate-button:hover {
+    background-color: #218838;
+}
+
+
+
+
+
